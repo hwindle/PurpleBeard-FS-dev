@@ -1,0 +1,301 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+/** GENERAL STYLES, COLOUR VARIABLES **/
+:root {
+  --logo-colour: rgb(96, 96, 96);
+  --mid-grey: rgb(141, 142, 138);
+  --light-grey-opac: rgba(200, 200, 200, 0.8);
+  --lilac: rgb(197, 166, 251);
+  --red: rgb(253, 7, 21);
+  /* sizes */
+  --radius-size: 10px;
+}
+
+body {
+  /* background-color: lightgrey; */
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+}
+
+section.wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/** HEADER **/
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: black;
+  color: white;
+}
+
+header > h1 {
+  font-size: 2.3rem;
+}
+
+h1 > span.little-logo {
+  display: inline-block;
+  margin: 0.4rem;
+  background-color: var(--logo-colour);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 0.7rem;
+  /* get the h1 and logo lined up */
+  vertical-align: middle;
+  /* Move the logo text into the middle of circle */
+  line-height: 4;
+  text-align: center;
+  color: white;
+}
+
+/** NAVIGATION **/
+ul.main-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+ul.main-nav li a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+  /* font-weight: bold; */
+  padding: 0 0.6rem;
+}
+
+ul.main-nav li a:hover {
+  color: var(--lilac);
+}
+
+/** MAIN **/
+span.large-logo {
+  position: relative;
+  display: block;
+  margin: 0.6rem;
+  background-color: var(--logo-colour);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  font-size: 1rem;
+  /* get the h1 and logo lined up */
+  /* vertical-align: middle; */
+  /* Move the logo text into the middle of circle */
+  line-height: 5;
+  text-align: center;
+  color: white;
+}
+
+span.large-logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 4px;
+  height: 100%;
+  background-color: var(--red);
+}
+
+/* end of logos */
+/* ABOUT section */
+main > section {
+  margin: 3rem 0;
+}
+
+section.about {
+  background-color: var(--mid-grey);
+  border: 2px solid black;
+  border-radius: var(--radius-size);
+}
+
+div.inner-wrapper {
+  margin: 1rem;
+  display: flex;
+  gap: 1.8rem;
+  justify-content: center;
+}
+
+div.inner-wrapper > article {
+  margin-top: 0.8rem;
+}
+
+div.inner-wrapper > article > h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* PRODUCTS */
+section.product-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+article.card {
+  flex-basis: 14rem;
+  /* inner flex container stuff */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  /* other styles */
+  background-color: var(--lilac);
+  border: 2px solid black;
+  border-radius: var(--radius-size);
+}
+
+article.card h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2;
+}
+
+/** FORM SECTION, buttons **/
+
+button,
+input[type="submit"] {
+  padding: 0.3rem 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: 1px solid var(--logo-colour);
+  border-radius: var(--radius-size);
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: var(--mid-grey);
+  border: 1px solid black;
+}
+
+section.contact-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: stretch;
+}
+
+section.contact-form h4 {
+  font-weight: 400;
+}
+
+section.contact-form form {
+  flex: 1 1 auto;
+
+}
+
+section.contact-form form > textarea {
+  width: 100%;
+  height: 6rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: var(--radius-size);
+  box-shadow: 0px 3px 10px var(--mid-grey);
+}
+
+.form-row {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* modal styles */
+/* default - hidden */
+#modal-newsletter {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+#modal-newsletter.visible {
+  display: flex;
+}
+
+section.modal-wrapper {
+  /* for positioning the close btn absolute */
+  position: relative;
+  /* go in the middle */
+  margin: auto;
+  width: 80%;
+  max-width: 40rem;
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-grey-opac);
+  border-radius: var(--radius-size);
+  padding: 1.6rem;
+}
+
+section.modal-wrapper h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+section.modal-wrapper form {
+  margin: 0.7rem;
+  padding: 1rem;
+  /* border: 2px dotted var(--red);  */
+}
+
+.modal-form-control {
+  font-size: 1.4rem;
+  padding: 0.3rem;
+  border-radius: var(--radius-size);
+}
+
+section.modal-wrapper p {
+  text-align: center;
+}
+
+section.modal-wrapper form #newsletter-submit {
+  background-color: var(--lilac);
+}
+
+section.modal-wrapper form #newsletter-submit:hover {
+  background-color: black;
+  color: white;
+}
+
+.close-btn-area > #close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: white;
+  border-radius: var(--radius-size);
+  text-decoration: none;
+  color: black;
+}
+
+.close-btn-area > #close-modal:hover {
+  background-color: var(--light-grey-opac);
+  color: var(--red);
+} 

@@ -1,0 +1,12 @@
+:root {
+  /* Variables for colours, fonts */
+  --body-font: Verdana, Geneva, Tahoma, sans-serif;
+  --col-blue-400: rgb(0, 12, 198);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+

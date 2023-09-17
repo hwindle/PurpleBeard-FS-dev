@@ -1,0 +1,12 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #af7ca7;
+  --text-col: #1c1c1c;
+  --blush: #f8e0d6;
+  font-size: 16px;
+}

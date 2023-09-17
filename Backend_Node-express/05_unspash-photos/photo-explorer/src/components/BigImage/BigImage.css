@@ -1,0 +1,21 @@
+figure.big-image {
+  width: 80vw;
+  margin: 2rem auto;
+  padding: 0.8rem;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #CCCCCC;
+}
+
+figure.big-image > img {
+  display: block;
+  width: 95%;
+  margin: 20px auto;
+}
+
+figure.big-image > figcaption {
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+  line-height: 2;
+}

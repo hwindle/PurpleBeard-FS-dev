@@ -1,0 +1,20 @@
+* {
+  font-size: 16px;
+}
+
+div {
+  width: 25%;
+  height: 100px;
+  display: inline-block;
+  font-size: 30px;
+}
+
+#em {
+  background-color: red;
+  font-size: 2em;
+}
+
+#rem {
+  background-color: blue;
+  font-size: 2rem;
+}

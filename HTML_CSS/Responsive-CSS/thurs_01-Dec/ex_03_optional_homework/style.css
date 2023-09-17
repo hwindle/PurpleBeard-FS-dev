@@ -1,0 +1,226 @@
+:root {
+  --blue-colour: rgb(39, 70, 247);
+  --light-grey: #BBBBBB;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-size: 16px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+header, nav, footer, .card {
+  background-color: var(--light-grey);
+}
+
+header {
+  width: 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+span {
+  width: 14px;
+  height: 14px;
+  padding: 1px;
+  padding-right: 2px;
+}
+
+/**** NAVIGATION ****/
+
+#top-nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#top-nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+#top-nav ul li {
+  list-style: none;
+}
+
+#top-nav a {
+  font-size: 1.75rem;
+  color: var(--blue-colour);
+}
+
+/* mobile */
+@media screen and (max-width: 660px) {
+  #top-nav, #top-nav ul {
+    flex-direction: column;
+  }
+
+  #top-nav ul li, #search-bar {
+    margin: 0;
+    padding-bottom: 0.5rem;
+    align-self: center;
+  }
+
+  #top-nav a {
+    font-size: 2rem;
+  }
+
+  #search-bar {
+    order: -1;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 730px) {
+  #top-nav {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #top-nav ul {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #top-nav li {
+    margin: 0 0.5rem;
+  }
+
+  #top-nav a {
+    font-size: 1.75rem;
+  }
+
+  #search-bar {
+    margin-left: 2rem;
+    align-self: center;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 990px) {
+  #top-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #top-nav ul {
+    flex-grow: 1;
+  }
+
+  #search-bar {
+    margin-left: auto;
+  }
+}
+
+/****** FORMS & Search bar ******/
+#search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.form-input {
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  border-radius: 6px;
+}
+
+#search-bar span {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  vertical-align: center;
+}
+
+.form-input[type="submit"],
+.card > button {
+  background-color: var(--blue-colour);
+  color: white;
+  font-weight: bold;
+  border: 2px solid var(--blue-colour);
+}
+
+.form-input[type="submit"]:hover,
+.form-input[type="submit"]:focus,
+.card > button:hover,
+.card > button:focus {
+  background-color: white;
+  color: black;
+  border: 2px solid var(--blue-colour);
+}
+
+/******* Main content and cards *********/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+article.card {
+  /* each card is itself display flex */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  /* laying out the cards in main */
+  flex-basis: 18rem;
+  height: 18rem;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+.card h3 a {
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+p.description {
+  flex-grow: 1;
+}
+
+p.price {
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+}
+
+.card > button {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+}
+
+/******* FOOTER ********/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+form#newsletter-signup {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+form#newsletter-signup label,
+form#newsletter-signup input {
+  align-self: center;
+}
+
+footer .company-info {
+  align-self: center;
+  padding-bottom: 0.75rem;
+}

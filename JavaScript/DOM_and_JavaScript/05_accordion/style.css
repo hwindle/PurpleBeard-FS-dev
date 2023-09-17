@@ -1,0 +1,60 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+/*** GENERAL STYLES ***/
+body {
+  /* put elements in middle (children of body) */
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(230, 230, 230);
+}
+
+section.accordion {
+  width: 800px;
+  padding: 1.2rem;
+  background-color: #343434;
+  box-shadow: 0 0 10px 2px rgb(38, 187, 255);
+}
+
+a.accordion-heading,
+a.accordion-heading:visited {
+  display: block;
+  padding: 0.6rem 0;
+  text-align: center;
+  background-color: black;
+  border-bottom: 2px solid rgb(38, 187, 255);
+  color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+a.accordion-heading:focus,
+a.accordion-heading:hover {
+  background-color: #1c1c1d;
+  border-bottom: 2px solid rgb(230, 230, 230);
+}
+
+div.content-area > p {
+  height: auto;
+  /* animation bit */
+  transition: height, 0.4s;
+
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* hide the paragraphs by default */
+div.content-area > p.accordion-hidden {
+  height: 0;
+  padding: 0;
+  overflow-y: hidden;
+}

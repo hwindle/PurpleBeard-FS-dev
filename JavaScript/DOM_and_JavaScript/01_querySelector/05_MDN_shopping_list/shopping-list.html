@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item" />
+      <button>Add item</button>
+    </div>
+
+    <ul></ul>
+
+    <script>
+      const ulElement = document.querySelector("ul");
+      const inputElement = document.querySelector("input");
+      const btnElement = document.querySelector("button");
+
+      // add code to make clicking on add item work
+      btnElement.addEventListener("click", () => {
+        // if the button is clicked.
+        const valueInput = inputElement.value;
+        inputElement.value = "";
+        const newLi = document.createElement("li");
+        const newSpan = document.createElement("span");
+        const newButton = document.createElement("button");
+        // append span and button to the <li>
+      
+        newLi.appendChild(newSpan);
+        newSpan.textContent = valueInput;
+        newLi.appendChild(newButton);
+        newButton.textContent = "Delete";
+        ulElement.appendChild(newLi);
+        console.log(newLi);
+        // make delete button work
+        newButton.addEventListener("click", () => {
+          ulElement.removeChild(newLi);
+        });
+        // move the focus so the user can type in another search
+        inputElement.focus();
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Libre+Baskerville&display=swap');
+
+/*** Reset ***/
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*** CSS variables ***/
+:root {
+  font-size: 16px;
+
+  --heading-font: 'DM Serif', Georgia, 'Times New Roman', 'Liberation serif', Times, serif;
+  --body-font: 'Libre Baskerville', Georgia, serif;
+  --orange: rgb(211, 138, 19);
+  --off-white: rgb(255, 249, 213);
+  --light-beige: rgb(248, 219, 171);
+  --coffee: rgb(111, 82, 56);
+  --off-black: rgb(26, 23, 18);
+  --border-radius: 10px;
+  --default-padding: 1rem;
+}

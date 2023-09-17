@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wireframe with Modal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <header>
+        <h1><span class="little-logo">LOGO</span>Web Application</h1>
+        <nav>
+          <ul class="main-nav">
+            <li class="menu-item"><a href="index.html">Home</a></li>
+            <li class="menu-item"><a href="#">About</a></li>
+            <li class="menu-item"><a href="#">Subjects</a></li>
+            <li class="menu-item"><a href="#">Log in</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="about">
+          <div class="inner-wrapper">
+            <span class="large-logo">LOGO</span>
+            <article>
+              <h2>About Our Web Applications</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis debitis laboriosam ut! <a href="#">Learn More</a>
+              </p>
+            </article>
+          </div>
+        </section>
+        <!-- products -->
+        <section class="product-wrapper">
+          <article class="card">
+            <h3>Products</h3>
+            <span class="large-logo">LOGO</span>
+            <p>Some Description</p>
+            <button class="product-btn">Learn More</button>
+          </article>
+          <article class="card">
+            <h3>Products</h3>
+            <span class="large-logo">LOGO</span>
+            <p>Some Description</p>
+            <button class="product-btn">Learn More</button>
+          </article>
+          <article class="card">
+            <h3>Products</h3>
+            <span class="large-logo">LOGO</span>
+            <p>Some Description</p>
+            <button class="product-btn">Learn More</button>
+          </article>
+        </section>
+        <section class="contact-form">
+          <h4 class="form-title">Contact me</h4>
+          <form action="" method="post">
+            <textarea id="msg" name="msg" required>
+Enter your message </textarea
+            >
+            <div class="form-row">
+              <input
+                type="submit"
+                id="contact-submit"
+                name="contact-submit"
+                value="Submit"
+              />
+              <button class="newsletter-btn">Newsletter Signup</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </section>
+    <!-- pop up modal -->
+    <div id="modal-newsletter" class="">
+      <section class="modal-wrapper">
+        <div class="close-btn-area">
+          <a href="#" id="close-modal" tabindex="3">Close</a>
+        </div>
+        <h3>Sign up for our newsletter</h3>
+        <form action="" method="post" id="newsletter-signup">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="modal-form-control"
+            placeholder="Please enter email"
+            tabindex="1"
+            autofocus
+          />
+          <button
+            class="modal-form-control"
+            id="newsletter-submit"
+            name="newsletter-submit"
+            tabindex="2"
+          >
+            Sign Up
+          </button>
+          <p>We <em>promise</em> not to spam you with 5,000 emails.</p>
+        </form>
+      </section>
+    </div>
+    <!-- scripts -->
+    <script src="main.js"></script>
+  </body>
+</html>

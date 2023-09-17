@@ -1,0 +1,133 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+  color: white;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header {
+  background-image: linear-gradient(180deg, black 0px, purple 250px);
+  width: 100%;
+  padding: 1rem;
+}
+
+header > h1#appTitle {
+  font-size: 3rem;
+  line-height: 2;
+  text-align: center;
+}
+
+/*** Main layout ***/
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/*** FORMS ***/
+form {
+  margin-top: 3rem;
+  width: 50vw;
+  padding: 1.5rem;
+  background-color: rgb(200, 130, 255);
+  color: black;
+  border: 2px solid black;
+  box-shadow: 0 0 15px 2px purple;
+}
+
+div.form-row {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input#year,
+select {
+  width: 100%;
+  padding: 0.3rem 0.8rem;
+  border: 0;
+  font-size: 1.5rem;
+}
+
+button#search-btn {
+  font-size: 1.7rem;
+  padding: 0.5rem 0.8rem;
+  border: 3px solid purple;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+button#search-btn:hover,
+button#search-btn:focus {
+  background-color: white;
+  color: black;
+}
+
+/*** the Film display bit ***/
+section#movieInfo {
+  width: 75vw;
+  min-height: 50vh;
+  padding: 2rem;
+  border: 2px solid gray;
+  margin-bottom: 2rem;
+}
+
+section.film-flex-wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div#moviePoster > img {
+  width: 100%;
+  height: auto;
+  /* margin-right: 2rem; */
+}
+
+h3#movieTitle {
+  font-size: 2.6rem;
+  text-align: center ;
+}
+
+article.additional-info {
+  max-width: 50%;
+}
+
+article.additional-info > p#movieOverview {
+  text-align: justify;
+}
+
+article.additional-info > h4 {
+  line-height: 3;
+}
+
+section.cast {
+  margin-bottom: 2rem;
+}
+
+
+/*** Mobile media queries ***/
+@media screen and (max-width: 700px) {
+  form {
+    width: 75vw;
+  }
+
+  section.film-flex-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+}

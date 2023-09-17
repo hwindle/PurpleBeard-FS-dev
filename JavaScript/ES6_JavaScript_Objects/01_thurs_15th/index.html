@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Map</title>
+</head>
+<body>
+  <h1>Higher Order Functions in JavaScript</h1>
+
+  <h2>What are higher order functions?</h2>
+  <p>Functions that take in other functions as arguments, and/or functions that return functions.</p>
+
+  <h3>array.forEach</h3>
+  <p>This changes the original array you are working on, in other words it mutates state.</p>
+  <p>This could be used when changing data types in place, for example changing strings into<br />
+  numbers or breaking up long numbers into digits.</p>
+
+  <h3>Map</h3>
+  <p>One key difference between map and forEach is that map returns a new array and <br />leaves the original array. <br />Unlike array.forEach, you can also chain map and other JavaScript methods together, using a dot. <br />It doesn't mutate state, changing the original array can sometimes lead to bugs. <br />Map could be used with an array of DOM (document object model) elements from
+a web page. <br />Each element could then have styles or HTML attributes applied to it and it would be easier to write that way.</p>
+
+<!-- `code`
+DOM example
+`code` -->
+
+  <h3>Filter</h3>
+  <p>Used to validate and check each element of an array, by using an if condition<br />
+  without having to write an if statement. Useful for unchecked user inputs or<br />
+  parsing other data from an unknown source. This could also be used to check<br />
+  arrays of objects for properties or for whether that object is an instance of a certain class.</p>
+
+<!-- `code`
+OOP example
+`code` -->
+
+  <h3>Reduce</h3>
+  <p>Useful for summing an entire array or performing a mathematical <br />operation and accumulating that result. Reduces the array to one value.</p>
+
+
+
+  
+  <script src="main.js"></script>
+</body>
+</html>

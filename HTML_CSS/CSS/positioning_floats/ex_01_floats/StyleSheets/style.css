@@ -1,0 +1,51 @@
+/*
+   CSS style sheet for box model hubble web page
+
+*/
+
+/* set main font-family and also box-sizing scheme */
+
+body{
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* tile_div is main container and sets the dimensions for all children within */
+/* overflow:hidden allows image corners to be over-ridden by radiused border */
+
+.tile_div{
+  float: left;
+  width: 350px;
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: 5px 10px 18px #888888;
+  background-color: white;
+  overflow: hidden;
+  margin: 30px;
+}
+
+/* space is simply a basic coloured header */
+
+#space{
+  font-size: 12px;
+  color: blue;
+  margin: 7px 15px 10px 15px;
+}
+
+/* hubble is the main title header */
+
+#hubble{
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 7px 15px 10px 15px; 
+}
+
+/* hubble_text is just a sentence of general description text */
+
+#hubble_text{
+  font-size: 13px;
+  color: rgb(63,63,63);
+  margin: 0px 15px 15px 15px;
+  height: 100%;
+}

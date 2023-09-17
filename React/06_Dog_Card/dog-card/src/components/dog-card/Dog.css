@@ -1,0 +1,26 @@
+section.card {
+  margin: auto;
+  width: 470px;
+  padding: 1rem;
+  background-color: #7abebe;
+  color: black;
+  border: 1px solid #e193ff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #f0cef8;
+}
+
+section.card > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #f0cef8;
+  border: #e193ff
+}

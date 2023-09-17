@@ -1,0 +1,27 @@
+.card {
+  width: 75%;
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #ccc;
+  padding: 1.5rem;
+}
+
+.card > h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card span.due-date {
+  font-weight: bold;
+  padding-right: 30px;
+}
+
+p.card-text > span.due-date.overdue {
+  color: #df0011;
+}
+
+div.task-name.completed.card-title {
+  text-decoration: line-through;
+}

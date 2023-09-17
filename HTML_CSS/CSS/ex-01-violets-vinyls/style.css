@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Verdana, sans-serif;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
+
+/* header */
+header h1 {
+  margin: 60px 0;
+  background-image: url('./img/Records.jpg');
+  font-size: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2, h3 {
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+h2#selection {
+  background-color: #EF8354;
+}
+
+h2#selling {
+  background-color: #0E7C7B;
+}
+
+h2#live-music {
+  background-color: #9C538B;
+}
+
+/* Text */
+span {
+  font-weight: bold;
+}
+
+footer p {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* images */
+img {
+  /* top and bottom margin */
+  margin: 15px 0;
+  width: 500px;
+}
+
+/* links */
+a, a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #EF8354;
+}
+
+a:hover {
+  color: #9C528B;
+}
+
+/* layout */
+footer {
+  padding: 20px;
+}
